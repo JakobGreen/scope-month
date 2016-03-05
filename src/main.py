@@ -48,17 +48,21 @@ class ScopeMonthWebDriver(object):
         self.driver.get('http://www.keysight.com/main/editorial.jspx?cc=US&lc=eng&ckey=2678002&nid=-32546.0.00&id=2678002')
         time.sleep(3)
 
-        english = self.driver.find_element_by_css_selector('#absolute_canvas_object_abs_element_4 > div > a')
+        new_url = self.driver.find_element_by_css_selector('#intro iframe').get_attribute('src')
+        self.driver.get(new_url)
+        time.sleep(3)
+
+        english = self.driver.find_element_by_css_selector('#absolute_canvas_object_abs_element_3 a')
         english.click()
 
         time.sleep(3)
 
-        el = self.driver.find_element_by_css_selector('.field_0_identity .form-element input')
+        el = self.driver.find_element_by_css_selector('input[name="field_0"]')
         el.send_keys('Jakob')
 
         time.sleep(.5)
 
-        el = self.driver.find_element_by_css_selector('.field_1_identity .form-element input')
+        el = self.driver.find_element_by_css_selector('input[name="field_1"]')
         el.send_keys('Green')
 
         time.sleep(.5)
