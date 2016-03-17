@@ -1,0 +1,6 @@
+[Unit]
+Description=Enters the scope month drawing for the day
+
+[Service]
+Type=simple
+ExecStart=/home/jakeg/src/scope-month/main.py --headless --config /home/jakeg/src/scope-month/config.json
