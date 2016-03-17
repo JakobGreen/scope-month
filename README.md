@@ -11,7 +11,7 @@ Only Python2.7 is supported.
 
 ### Edit config.json
 With a text editor **edit the config.json** file and fill out your information. The fields should be fairly self explanatory.
-The only field that requires specific values is "oscope_need" which can be "never", "3 months", or "12 months".
+The only field that requires specific values is "oscope_need" which can be "no", "3 months", or "12 months".
 
 ### Add a timer (optional)
 Within the systemd directory a systemd service and timer file have already been created.
